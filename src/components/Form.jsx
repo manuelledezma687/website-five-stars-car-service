@@ -8,7 +8,7 @@ import { Formik } from 'formik';
 
 const Form = () => {
     return (
-                    <div className='main-form'>
+                    <div className='main-form' id='booking'>
                         <h1 className='title'>Quote your trip and book with us, to live the <span> best experience.</span>Just in time with <span>FiveStars.</span></h1>
                         <form action="" className='form'>
                             <select name="select-type-travel" className="select-type">

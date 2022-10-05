@@ -40,7 +40,7 @@ const ContactForm = () => {
 				}}
 			>
 				{( {errors} ) => (
-					<Form className="contact-form">
+					<Form className="contact-form" id='contact'>
                         <h1 className='contact-input'>Contact Us</h1>
 						<div className='contact-input'>
 							<label htmlFor="name">Name</label>

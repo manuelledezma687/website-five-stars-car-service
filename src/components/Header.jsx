@@ -18,23 +18,23 @@ const Header = () => {
                     <ul class="navbar-nav me-auto mb-2 bg-dark" >
                         <li className="nav-item">
                         <img src={Home} alt="Home" className='icon-list-menu'/>
-                            <a id="list-item" class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a id="list-item" class="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item" id="item-list">
                         <img src={People} alt="Booking" className='icon-list-menu'/>
-                            <a id="list-item" class="nav-link" href="#">Booking</a>
+                            <a id="list-item" class="nav-link" href="#booking">Booking</a>
                         </li>
                         <li class="nav-item">
                         <img src={BookMark} alt="Our Services" className='icon-list-menu'/>
-                            <a id="list-item" class="nav-link" href="#">Our Services</a>
+                            <a id="list-item" class="nav-link" href="#services">Our Services</a>
                         </li>
                         <li class="nav-item">
                         <img src={Home} alt="Comments" className='icon-list-menu'/>    
-                            <a id="list-item" class="nav-link" href="#">Comments</a>
+                            <a id="list-item" class="nav-link" href="#rating">Comments</a>
                         </li>
                         <li class="nav-item">
                         <img src={Phone} alt="Contact Us" className='icon-list-menu'/>
-                            <a id="list-item" class="nav-link" href="#">Contact Us</a>
+                            <a id="list-item" class="nav-link" href="#contact">Contact Us</a>
                         </li>
                     </ul>
                 </div>

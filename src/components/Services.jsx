@@ -7,7 +7,7 @@ import '../styles/Services.css';
 
 const Services = () => {
     return (
-        <section className='service-main'>
+        <section className='service-main' id='services'>
             <h1 className="services">Services</h1>
             <div className="service-list" >
                 <div className="container-service">
