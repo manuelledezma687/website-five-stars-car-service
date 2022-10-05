@@ -1,0 +1,140 @@
+.main-form {
+    display: block;
+    padding: 2%;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+.title {
+    width: 90%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 275;
+    font-size: var(--md);
+    line-height: 36px;
+    align-items: center;
+    text-align: center;
+    color: var(--black);
+    margin: auto;
+    margin-bottom: 30px;
+    }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 90%;
+    height: 512px;
+    background: var(--white);
+    flex: none;
+    order: 1;
+    justify-content: center;
+    margin: auto;
+}
+
+.select-type {
+    width: 100%;
+    display: flex;
+    height: 66px;
+    background: var(--very-light-golden);
+    order: 0;
+    align-self: stretch;
+}
+
+.select-travel {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: 46px;
+    background: var(--light-golden);
+    border-radius: 4px 4px 0px 0px;
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+    width: 133.5px;
+    height: 4rem;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--md);
+    display: flex;
+    align-items: center;
+    color: var(--black);
+    text-align: center;
+}
+
+.inputs-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px;
+    height: 72px;
+    width: 100%;
+    background: var(--light-golden);
+    border-radius: 4px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.form-label {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--md);
+    line-height: 24px;
+    color: var(--black);
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+#text ,
+#date,
+#time
+{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--md);
+    line-height: 22px;
+    color: var(--black);
+    opacity: 0.5;
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+    outline: none;
+	border-radius: 5px;
+	border: 2px solid #e2e2e2;
+	color: #1f1f1f;
+}
+
+input:focus {
+	outline: none;
+	border: 2px solid #0085FF;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+button.send-form {
+    flex-direction: row;
+    width: 105%;
+    height: 100px;
+    background: var(--blue);
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: var(--md);
+    color: var(--light-golden);
+    order: 3;
+    margin-top: 4%;
+}
+

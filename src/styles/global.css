@@ -1,0 +1,40 @@
+:root {
+	--white: #FFFFFF;
+	--black: #030200;
+	--blue: #506496;
+	--very-light-pink: #C7C7C7;
+	--red: red;
+	--text-input-field: #F7F7F7;
+	--light-golden: #E2D3A8;
+	--very-light-golden: #FEF9EA;
+	--golden:#D3B365;
+	--ssm: 1rem;
+	--sgm: 1.2rem;
+	--sm: 1.4rem;
+	--md: 1.6rem;
+	--lg: 1.8rem;
+	--eg: 2.4rem;
+}
+
+body {
+	margin: 0;
+	background-color: var(--white);
+	box-sizing: border-box;
+    padding: 0;
+	font-size: 62.5%;
+	width: 100%;
+	font-family: 'Poppins';
+}
+
+h1 {
+	font-size: var(--md);
+}
+
+p {
+	font-size: var(--sm);
+}
+
+span {
+    color: var(--golden);
+	font-weight: bold;
+    }

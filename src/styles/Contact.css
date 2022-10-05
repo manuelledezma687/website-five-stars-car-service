@@ -1,0 +1,102 @@
+.contact-form {
+	width: 100%;
+	margin-top: 50px;
+	background: var(--very-light-golden);
+	padding: 20px;
+	display: block;
+	margin-bottom: 100px;
+	padding-bottom: 50px;
+	align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.contact-input #email,
+.contact-input #name,
+.contact-input #message
+{
+	margin: auto;
+	display: block;
+	align-items: center;
+}
+
+.contact-input label
+{
+	margin-left: 10%;
+}
+
+
+
+h1.contact-input{
+	text-align: center;
+	font-size: var(--eg);
+}
+
+.contact-form > div {
+	margin-bottom: 20px;
+}
+
+.contact-form label {
+	display: block;
+	font-weight: 600;
+	font-size: var(--sm);
+	margin-bottom: 5px;
+	color: #1f1f1f;}
+
+.contact-form input,
+.contact-form textarea {
+	width: 80%;
+	border-radius: 5px;
+	border: 2px solid #e2e2e2;
+	font-size: 18px;
+	padding: 10px;
+	margin-bottom: 5px;
+	color: #1f1f1f;
+}
+
+.contact-form input:focus {
+	outline: none;
+	border: 2px solid #0085FF;
+}
+
+.contact-form .error {
+	margin-left: 10%;
+	color: var(--red);
+	font-weight: 600;
+	font-size: var(--sm);
+}
+
+.contact-form button[type="submit"] {
+	margin: auto;
+	display: block;
+	font-weight: 600;
+	border: none;
+	cursor: pointer;
+	width: 82%;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 16px;
+	transition: .3s ease all;
+	background: var(--blue);
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: var(--md);
+    color: var(--light-golden);
+}
+
+.contact-form button[type="submit"]:hover {
+	background: var(--golden);
+	color: var(--black);
+}
+
+.contact-form .exito {
+	text-align: center;
+	font-size: var(--md);
+	padding-top: 20px;
+	color: #02a802;
+}
+
+.contact-form input[type="radio"] {
+	width: auto;
+}
