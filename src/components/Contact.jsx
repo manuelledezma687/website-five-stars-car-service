@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import '../styles/Contact.css';
-
+import { motion} from "framer-motion"
 
 const ContactForm = () => {
 	const [formSent, changeFormSent] = useState(false);
@@ -41,7 +41,13 @@ const ContactForm = () => {
 			>
 				{( {errors} ) => (
 					<Form className="contact-form" id='contact'>
-                        <h1 className='contact-input'>Contact Us</h1>
+                        <motion.h1 
+						whileHover={{
+							scale: 1.2,
+							rotate: 0,
+							fixed:0
+						}}
+						className='contact-input'>Contact Us</motion.h1>
 						<div className='contact-input'>
 							<label htmlFor="name">Name</label>
 							<Field

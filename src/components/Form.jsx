@@ -3,13 +3,19 @@ import '../styles/Form.css';
 import pointer from '../assets/icons/point.svg';
 import calendar from '../assets/icons/calendar.svg';
 import time from '../assets/icons/clock.svg';
-import { Formik } from 'formik';
+import { motion} from "framer-motion"
 
 
 const Form = () => {
     return (
                     <div className='main-form' id='booking'>
-                        <h1 className='title'>Quote your trip and book with us, to live the <span> best experience.</span>Just in time with <span>FiveStars.</span></h1>
+                        <motion.h1 
+                        whileHover={{
+                            scale: 1.1,
+                            rotate: 0,
+                            fixed:0
+                        }}
+                        className='title'>Quote your trip and book with us, to live the <span> best experience.</span>Just in time with <span>FiveStars.</span></motion.h1>
                         <form action="" className='form'>
                             <select name="select-type-travel" className="select-type">
                                 <option className="select-travel">One Way</option>
