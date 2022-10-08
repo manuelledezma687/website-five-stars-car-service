@@ -2,8 +2,28 @@ import React, {useState} from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import '../styles/Contact.css';
 import { motion} from "framer-motion"
+import axios from "axios";
+
 
 const ContactForm = () => {
+	const baseURL = "http://127.0.0.1:8000/contact";
+
+	const [post, setPost] = React.useState(null);
+
+	  function createPost() {
+		axios
+		  .post(baseURL, {
+			name: value.name,
+			email: value.email,
+			message:value.message
+		  })
+		  .then((response) => {
+			setPost(response.data);
+		  });
+	  }
+	
+	  //if (!post) return "Sorry Service done!"
+
 	const [formSent, changeFormSent] = useState(false);
 	return (
 		<>
@@ -73,10 +93,11 @@ const ContactForm = () => {
 							id="message" 
 							name="message" 
 							as="textarea" 
-							placeholder="Message" />
+							placeholder="Message" 
+							/>
 						</div>
 
-						<button type="submit">Send</button>
+						<button onClick={createPost} type="submit">Send</button>
 						{formSent && <p className="exito">Form sent succesfull!</p>}
 					</Form>
 				)}

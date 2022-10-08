@@ -10,7 +10,7 @@ const Hero = () => {
             <div className='hero-banner'>
                 <div className='content-box'>
                     <p className='main-message'>If you travel to Atlanta for pleasure or business, FiveStar Car service helps you move around the City comfortably and safely 24 hours a day.</p>
-                    <h1 className='just-time'>Just in time with <span>FiveStars</span> </h1>
+                    <h1 className='just-time'>Just in time with <span> FiveStars</span></h1>
                 </div>
                 <motion.img 
                 whileHover={{
