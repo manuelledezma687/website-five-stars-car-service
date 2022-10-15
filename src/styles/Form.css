@@ -1,3 +1,4 @@
+
 .main-form {
     display: block;
     padding: 1%;
@@ -63,4 +64,18 @@
 #form button[type="submit"]:hover {
 	background: var(--golden);
 	color: var(--black);
+}
+
+.icon {
+    width: 50px;
+    height: auto;
+}
+#google{
+    padding-bottom: 10px;
+}
+
+#label-google {
+    font-size: var(--ssm);
+    color: var(--black);
+    margin-left: 10px;
 }

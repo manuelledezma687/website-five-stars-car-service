@@ -61,13 +61,7 @@ const ContactForm = () => {
 			>
 				{( {errors} ) => (
 					<Form className="contact-form" id='contact'>
-                        <motion.h1 
-						whileHover={{
-							scale: 0.9,
-							rotate: 0,
-							fixed:0
-						}}
-						className='contact-input-f'>Contact Us</motion.h1>
+                        <h1 className='contact-input-f'>Contact Us</h1>
 						<div className='contact-input'>
 							<label htmlFor="name">Name</label>
 							<Field

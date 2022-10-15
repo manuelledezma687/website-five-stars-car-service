@@ -8,6 +8,7 @@ import {Footer} from './components/Footer';
 import './styles/global.css'
 import Contact from './components/Contact';
 import Carrousel from "./components/Carrousel";
+import RatingContainer from  './containers/RatingContainer';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -16,7 +17,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Hero/>
     <Carrousel/>
     <Services/>
-    <RatingMock/>
+    {/* <RatingMock/> */}
+    <RatingContainer/>
     <Contact/>
     <Footer/>
     </React.StrictMode>
