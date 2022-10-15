@@ -6,13 +6,14 @@ import Form from '../components/Form';
 
 const Hero = () => {
     return (
-        <section className="hero-container">
-            <div className='hero-banner'>
-                <div className='content-box'>
-                    <p className='main-message'>If you travel to Atlanta for pleasure or business, FiveStar Car service helps you move around the City comfortably and safely 24 hours a day.</p>
-                    <h1 className='just-time'>Just in time with <span> FiveStars</span></h1>
-                </div>
-                <motion.img 
+<section className="hero-container">
+    <div className='hero-banner'>
+        <div className='content-box'>
+            <p className='main-message'>If you travel to Atlanta for pleasure or business, FiveStar Car service helps you
+                move around the City comfortably and safely 24 hours a day.</p>
+            <h1 className='just-time'>Just in time with&nbsp;<span> FiveStars.</span></h1>
+        </div>
+        <motion.img 
                 whileHover={{
                     x: 20,
                     y: 20,
@@ -21,9 +22,9 @@ const Hero = () => {
                     fixed:0
                 }}
                 src= {corolla} alt="corolla" className="white-corolla" />
-            </div>
-            <Form/>
-        </section>
+    </div>
+        <Form/>
+</section>
 
     );
 }

@@ -26,11 +26,11 @@ const Header = () => {
                         </li>
                         <li class="nav-item">
                         <img src={BookMark} alt="Our Services" className='icon-list-menu'/>
-                            <a id="list-item" class="nav-link" href="#services">Our Services</a>
+                            <a id="list-item" class="nav-link" href="#service">Our Services</a>
                         </li>
                         <li class="nav-item">
                         <img src={Home} alt="Comments" className='icon-list-menu'/>    
-                            <a id="list-item" class="nav-link" href="#rating">Comments</a>
+                            <a id="list-item" class="nav-link" href="#ratings">Comments</a>
                         </li>
                         <li class="nav-item">
                         <img src={Phone} alt="Contact Us" className='icon-list-menu'/>
@@ -40,7 +40,6 @@ const Header = () => {
                 </div>
             </div>
         </nav>
-
     );
 }
 

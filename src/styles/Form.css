@@ -35,6 +35,7 @@
 
 #double-input {
     display: flex;
+    justify-content: space-between;
 }
 
 #form button[type="submit"] {
@@ -56,12 +57,10 @@
     color: var(--light-golden);
 }
 
+#passengers-list {
+    display: flex;
+}
 #form button[type="submit"]:hover {
 	background: var(--golden);
 	color: var(--black);
 }
-
-
-
-
-

@@ -1,10 +1,8 @@
 import React from 'react';
 import '../styles/Form.css';
 import pointer from '../assets/icons/point.svg';
-import calendar from '../assets/icons/calendar.svg';
-import time from '../assets/icons/clock.svg';
 import { motion } from "framer-motion"
-
+import '../hooks/locatorGoogle'
 
 const Form = () => {
     return (
@@ -16,35 +14,82 @@ const Form = () => {
                     fixed: 0
                 }}
                 className='title'>Quote your trip and book with us, to live the <span> best experience.</span>Just in time with <span>FiveStars.</span></motion.h1>
-            <form class="p-4 p-md-5 border rounded-3" id='form'>
-                <div id='double-input'>
-                <div class="input-btn-padding-x mb-3" id='input-form'>
-                     <img src={pointer} className="icon" alt="Pick Up" />
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Address Airport" />
+            <form class="p-4 p-md-5 border rounded-3 needs-validation" novalidate id='form' method="post" action="">
+                <div class="row" id='double-input'>
+                    <div class="col input-btn-padding-x mb-3" id='input-form'>
+                        <img src={pointer} class="icon" alt="Pick Up" />
+                        <input type="text" class="form-control" id="pick_up" placeholder="Pick Up" required
+                            name="pick_up" maxlength="50" />
+                    </div>
+                    <div class="col input-btn-padding-x mb-3" id='input-form'>
+                        <img src={pointer} class="icon" alt="Drop Off" />
+                        <input type="text" class="form-control" id="destiny" placeholder="Drop Off" required
+                            name="destiny" maxlength="50" />
+                    </div>
                 </div>
-                <div class="input-btn-padding-x mb-3"id='input-form'>
-                <img src={pointer} className="icon" alt="Drop Off" />
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Your Location" />
+                <div class="row" id="double-input">
+                    <div class="col input-btn-padding-x mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Full Name" required
+                            name="full_name" maxlength="50" />
+                    </div>
+                    <div class="col input-btn-padding-x mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="youremail@example.com"
+                            required name="email" maxlength="50" />
+                    </div>
                 </div>
+                <div class="row" id="double-input">
+                    <div class="col input-btn-padding-x mb-3">
+                        <input type="time" class="form-control" id="floatingInput" placeholder="hour" required
+                            name="date_time" />
+                    </div>
+                    <div class="col input-btn-padding-x mb-3">
+                        <input type="date" class="form-control" id="floatingInput" placeholder="Date" required
+                            name="date" />
+                    </div>
                 </div>
-                <div class="input-btn-padding-x mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Full Name" />
+                <div class="row" id="double-input">
+                    <div class="col input-btn-padding-x mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Fight" required
+                            name="flight" maxlength="20" />
+                    </div>
+                    <div class="col input-btn-padding-x mb-3">
+                        <select class="form-select" placeholder="payment method" required name="payment_method"
+                            maxlength="12">
+                            <option selected disabled value="">Payment Method</option>
+                            <option value="cash">Cash</option>
+                            <option value="paypal">Paypal</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="input-btn-padding-x mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="youremail@example.com" />
-                </div>
-                <div class="input-btn-padding-x mb-3">
-                    <input type="date" class="form-control" id="floatingInput" placeholder="Date" />
-                </div>
-                <div class="input-btn-padding-x mb-3">
-                    <input type="time" class="form-control" id="floatingInput" placeholder="hour" />
-                </div>
-                <div class="input-btn-padding-x mb-3">                    
-                    <select class="form-select" placeholder="payment method">
-                    <option value="cash">Cash</option>
-                    <option value="paypal">Paypal</option>
-                    <label for="floatingInput">Payment Method</label>
-                    </select>
+                <div class="row" id="double-input">
+                    <div class="col input-btn-padding-x mb-3">
+                        <div id="passengers-list">
+                            <select type="text" class="form-select" id="floatingInput" placeholder="passengers" required
+                                name="passengers">
+                                <option selected disabled value="">Passengers</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row input-btn-padding-x mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="observations" required
+                            name="observations" maxlength="100" />
+                    </div>
+                    <div class="row input-btn-padding-x mb-3">
+                        <select class="form-select" placeholder="type of travel" required name="type_of_travel"
+                            maxlength="12">
+                            <option selected disabled value="">Type of Travel</option>
+                            <option value="hourly">Hourly</option>
+                            <option value="way">On the way</option>
+                        </select>
+                    </div>
                 </div>
                 <button id="button" class="w-100 btn btn-lg btn-primary" type="submit">Book your Trip</button>
                 <hr class="my-4" />
