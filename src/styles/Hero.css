@@ -2,7 +2,7 @@
 .hero-container {
     display: flex;
     margin: 4rem 0 0 0;
-    justify-content:space-around;
+    justify-content:space-between;
     padding-left: 2%;
 }
 
@@ -40,10 +40,14 @@
     padding-left: 20px;
 }
 
-.white-corolla {
+#white-corolla {
     padding-left: 3%;
-    padding-top: 12%;
+    padding-top: 32%;
     width: 85%;
+}
+
+.white-corolla:hover {
+   transform: scale(1.1);
 }
 
 @media (max-width: 1097px) {
