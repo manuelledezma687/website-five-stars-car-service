@@ -82,7 +82,7 @@ h1.testimonials-title {
     justify-content: space-between;
 }
 
-@media (max-width: 1097px) {
+@media (max-width: 1405px) {
 
     #ul-rating {
         display: block;

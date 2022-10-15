@@ -14,12 +14,12 @@
 }
 
 .main-message {
-    width: 480px;
+    width: 650px;
     height: 104px;
     font-family: 'Poppins';
     font-style: normal;
-    font-size: var(--sm);
-    line-height: 26px;
+    font-size: var(--md);
+    line-height: 32px;
     align-items: center;
     color: var(--black);
     text-align: left;
@@ -27,28 +27,24 @@
 }
 
 .just-time {
-    width: 425px;
     height: 40px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: var(--lg);
-    line-height: 40px;
+    font-size: 2.6rem;
     display: flex;
-    align-items: center;
     color: var(--black);
     padding-left: 20px;
+    line-height : 4rem;
 }
 
-#white-corolla {
+.white-corolla {
     padding-left: 3%;
     padding-top: 32%;
     width: 85%;
 }
 
-.white-corolla:hover {
-   transform: scale(1.1);
-}
+
 
 @media (max-width: 1097px) {
 

@@ -2,9 +2,10 @@ import React from 'react';
 import '../styles/Form.css';
 import pointer from '../assets/icons/point.svg';
 import { motion } from "framer-motion"
-import '../hooks/locatorGoogle'
+import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 
 const Form = () => {
+
     return (
         <div className='main-form' id='booking'>
             <motion.h1
@@ -13,19 +14,16 @@ const Form = () => {
                     rotate: 0,
                     fixed: 0
                 }}
-                className='title'>Quote your trip and book with us, to live the <span> best experience.</span>Just in time with <span>FiveStars.</span></motion.h1>
+                className='title'>Quote your trip and book with us, to live the <span> best experience.</span>&nbsp;Just in time with <span>FiveStars.</span></motion.h1>
             <form class="p-4 p-md-5 border rounded-3 needs-validation" novalidate id='form' method="post" action="">
-                <div class="row" id='double-input'>
-                    <div class="col input-btn-padding-x mb-3" id='input-form'>
-                        <img src={pointer} class="icon" alt="Pick Up" />
-                        <input type="text" class="form-control" id="pick_up" placeholder="Pick Up" required
-                            name="pick_up" maxlength="50" />
-                    </div>
-                    <div class="col input-btn-padding-x mb-3" id='input-form'>
-                        <img src={pointer} class="icon" alt="Drop Off" />
-                        <input type="text" class="form-control" id="destiny" placeholder="Drop Off" required
-                            name="destiny" maxlength="50" />
-                    </div>
+
+                <div class="row" id='google'>
+                    <label htmlFor="" id='label-google'>Pick Up</label>
+                    <GooglePlacesAutocomplete apikey="AIzaSyCW8RbW836MOX6bO0aCh56ptNLqurt4vYg" type="text" placeholder="Pick Up" required
+                        name="pick_up" maxlength="100" />
+                    <label htmlFor="" id='label-google'>Destiny</label>
+                    <GooglePlacesAutocomplete apikey="AIzaSyCW8RbW836MOX6bO0aCh56ptNLqurt4vYg" type="text" class="form-control" id="destiny" placeholder="Drop Off" required
+                        name="destiny" maxlength="50" />
                 </div>
                 <div class="row" id="double-input">
                     <div class="col input-btn-padding-x mb-3">

@@ -5,7 +5,7 @@ import { motion} from "framer-motion"
 const Ratings = ({ rating }) => {
 
 	return (
-		<motion.figure 
+		<motion.li 
 		whileHover={{
 			x: 20,
 			y: 20,
@@ -13,11 +13,20 @@ const Ratings = ({ rating }) => {
 			rotate: 0,
 			fixed:0
 		}}
-		id='testimonials' class="shadow card.body">
+		id='testimonials'>
 				<p className='comments'>"{rating.comments}</p>
 				<h2 className='name-customer'>{rating.first_name} {rating.last_name}</h2>
-				<h4 className='date'>Created at {rating.created_at}</h4>
-		</motion.figure>
+                <div class="starring">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4 class="date">Created at {rating.created_at}</h4>
+                </div>
+		</motion.li>
 	);
 }
 
