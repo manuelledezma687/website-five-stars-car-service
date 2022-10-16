@@ -1,41 +1,40 @@
-
 .hero-container {
     display: flex;
     margin: 4rem 0 0 0;
-    justify-content:space-between;
+    justify-content: space-between;
     padding-left: 2%;
 }
 
 .hero-banner {
+    background-attachment: scroll;
     background-image: url('../assets/images/bg-toyota.png');
     background-repeat: no-repeat;
-    background-attachment:scroll;
     width: 80%;
 }
 
 .main-message {
-    width: 650px;
-    height: 104px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-size: var(--md);
-    line-height: 32px;
     align-items: center;
     color: var(--black);
-    text-align: left;
+    font-family: 'Poppins';
+    font-size: var(--md);
+    font-style: normal;
+    height: 104px;
+    line-height: 32px;
     margin-left: 20px;
+    text-align: left;
+    width: 650px;
 }
 
 .just-time {
-    height: 40px;
+    color: var(--black);
+    display: flex;
     font-family: 'Poppins';
+    font-size: 2.6rem;
     font-style: normal;
     font-weight: 500;
-    font-size: 2.6rem;
-    display: flex;
-    color: var(--black);
+    height: 40px;
+    line-height: 4rem;
     padding-left: 20px;
-    line-height : 4rem;
 }
 
 .white-corolla {
@@ -43,7 +42,6 @@
     padding-top: 32%;
     width: 85%;
 }
-
 
 
 @media (max-width: 1097px) {
@@ -54,10 +52,12 @@
 
     .hero-container {
         padding-left: 0%;
-    }}
+    }
+}
 
 @media (max-width: 1026px) {
 
     .hero-container {
         display: block;
-    }}
+    }
+}

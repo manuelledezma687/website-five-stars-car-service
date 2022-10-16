@@ -1,33 +1,42 @@
-
 .main-form {
-    display: block;
-    padding: 1%;
     align-items: center;
-    justify-content: center;
     box-sizing: border-box;
+    display: block;
+    justify-content: center;
+    padding: 1%;
     width: 100%;
 }
+
 .title {
-    width: 90%;
+    align-items: center;
+    color: var(--black);
     font-family: 'Poppins';
+    font-size: var(--md);
     font-style: normal;
     font-weight: 275;
-    font-size: var(--md);
     line-height: 36px;
-    align-items: center;
-    text-align: center;
-    color: var(--black);
-    margin: auto;
     margin-bottom: 30px;
-    }
+    margin: auto;
+    text-align: center;
+    width: 90%;
+}
 
 #form {
-
-    width: 100%;
     background: var(--light-golden);
+    flex-grow: 0;
     flex: none;
     order: 1;
-    flex-grow: 0;
+    width: 100%;
+}
+
+#google {
+    padding-bottom: 10px;
+}
+
+#label-google {
+    color: var(--black);
+    font-size: var(--ssm);
+    margin-left: 10px;
 }
 
 #input-form {
@@ -40,42 +49,29 @@
 }
 
 #form button[type="submit"] {
-	margin: auto;
-	display: block;
-	font-weight: 600;
-	border: none;
-	cursor: pointer;
-	width: 82%;
-	padding: 10px;
-	border-radius: 5px;
-	font-size: 16px;
-	transition: .3s ease all;
-	background: var(--blue);
+    background: var(--blue);
+    border-radius: 5px;
     border-radius: 8px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-size: var(--md);
+    border: none;
     color: var(--light-golden);
+    cursor: pointer;
+    display: block;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-size: var(--md);
+    font-style: normal;
+    font-weight: 600;
+    margin: auto;
+    padding: 10px;
+    transition: .3s ease all;
+    width: 82%;
 }
 
 #passengers-list {
     display: flex;
 }
+
 #form button[type="submit"]:hover {
-	background: var(--golden);
-	color: var(--black);
-}
-
-.icon {
-    width: 50px;
-    height: auto;
-}
-#google{
-    padding-bottom: 10px;
-}
-
-#label-google {
-    font-size: var(--ssm);
+    background: var(--golden);
     color: var(--black);
-    margin-left: 10px;
 }

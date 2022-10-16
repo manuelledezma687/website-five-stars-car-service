@@ -1,19 +1,21 @@
 import React from 'react';
+
 import '../styles/Header.css';
-import logo from '../assets/logos/logo.png';
+
+import Logo from '../assets/logos/logo.png';
 import Home from '../assets/icons/home.svg'
 import People from '../assets/icons/people.svg'
 import Phone from '../assets/icons/phone.svg'
 import BookMark from '../assets/icons/bookmark.svg'
-import menu from '../assets/icons/menu.svg'
+import Menu from '../assets/icons/menu.svg'
 
-const Header = () => {
+export function Header() {
 
     return (
         <nav class="navbar navbar-dark bg-white" id="nav">
             <div class="container-fluid">
-            <img src={logo} alt="logo" className="fivestars" />
-            <img src={menu} alt="Menu Bar" id='menu' class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false"/>
+            <img src={Logo} alt="logo" className="fivestars" />
+            <img src={Menu} alt="Menu Bar" id='menu' class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false"/>
                 <div class="collapse navbar-collapse" id="navbarsExample01">
                     <ul class="navbar-nav me-auto mb-2 bg-dark" >
                         <li className="nav-item">
@@ -43,4 +45,3 @@ const Header = () => {
     );
 }
 
-export default Header;

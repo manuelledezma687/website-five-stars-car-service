@@ -4,9 +4,9 @@
 	box-sizing: border-box;
 	display: block;
 	justify-content: center;
-	padding: 20px;
 	padding-bottom: 100px;
 	padding-top: 50px;
+	padding: 20px;
 	width: 100%;
 }
 
@@ -57,15 +57,15 @@ h1.contact-input-f {
 
 .contact-form .error {
 	color: var(--red);
-	font-weight: 600;
 	font-size: var(--sm);
+	font-weight: 600;
 	margin-left: 10%;
 }
 
 .contact-form button[type="submit"] {
 	background-color: var(--blue);
-	border: none;
 	border-radius: 8px;
+	border: none;
 	color: var(--light-golden);
 	cursor: pointer;
 	display: block;

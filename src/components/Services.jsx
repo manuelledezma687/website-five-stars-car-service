@@ -6,7 +6,7 @@ import car from '../assets/icons/car.png';
 import airplane from '../assets/icons/aero.png';
 import city from '../assets/icons/city.png';
 
-const Services = () => {
+export function Services() {
   return (
     <section id="service" className="service-main">
       <h1 className="services-title">Services</h1>
@@ -30,4 +30,3 @@ const Services = () => {
     </section>
   );
 }
-export default Services;

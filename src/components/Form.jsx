@@ -1,7 +1,8 @@
 import React from 'react';
-import '../styles/Form.css';
 import { motion } from "framer-motion"
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
+
+import '../styles/Form.css';
 
 const Form = () => {
 

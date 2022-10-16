@@ -19,8 +19,8 @@
 .service-box {
     box-sizing: border-box;
     margin: 0;
-    padding: 0var(--deka);
     padding-bottom: 20px;
+    padding: 0var(--deka);
     width: 100%;
 }
 
@@ -30,8 +30,8 @@
 
 #image-service {
     display: block;
-    flex: none;
     flex-grow: 0;
+    flex: none;
     margin: auto;
     order: 0;
     text-align: center;

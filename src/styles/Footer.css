@@ -1,6 +1,6 @@
 .main-footer {
-  bottom: 0;
   background-color: var(--blue);
+  bottom: 0;
   color: var(--white);
   padding-top: 3em;
   position: relative;
@@ -50,7 +50,6 @@
     margin: 0;
   }
 }
-
 
 @media (max-width: 390px) {
 
