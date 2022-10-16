@@ -1,86 +1,82 @@
 .contact-form {
-	width: 100%;
-	padding-top: 50px;
-	background: var(--very-light-golden);
-	padding: 20px;
-	display: block;
-	padding-bottom: 100px;
-	padding-bottom: 50px;
 	align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
+	background: var(--very-light-golden);
+	box-sizing: border-box;
+	display: block;
+	justify-content: center;
+	padding: 20px;
+	padding-bottom: 100px;
+	padding-top: 50px;
+	width: 100%;
 }
 
 .contact-input #email,
 .contact-input #name,
-.contact-input #message
-{
-	margin: auto;
-	display: block;
+.contact-input #message {
 	align-items: center;
+	display: block;
+	margin: auto;
 }
 
-.contact-input label
-{
+.contact-input label {
 	margin-left: 10%;
 }
 
-h1.contact-input-f{
-	text-align: center;
+h1.contact-input-f {
 	font-size: var(--eg);
+	text-align: center;
 }
 
-.contact-form > div {
+.contact-form>div {
 	margin-bottom: 20px;
 }
 
 .contact-form label {
+	color: #1f1f1f;
 	display: block;
-	font-weight: 600;
-	font-size: var(--sm);
 	margin-bottom: 5px;
-	color: #1f1f1f;}
+	font-size: var(--sm);
+	font-weight: 600;
+}
 
 .contact-form input,
 .contact-form textarea {
-	width: 80%;
-	border-radius: 5px;
 	border: 2px solid #e2e2e2;
-	font-size: 18px;
-	padding: 10px;
-	margin-bottom: 5px;
+	border-radius: 5px;
 	color: #1f1f1f;
+	font-size: var(--md);
+	margin-bottom: 5px;
+	padding: 10px;
+	width: 80%;
 }
 
 .contact-form input:focus {
-	outline: none;
 	border: 2px solid #0085FF;
+	outline: none;
 }
 
 .contact-form .error {
-	margin-left: 10%;
 	color: var(--red);
 	font-weight: 600;
 	font-size: var(--sm);
+	margin-left: 10%;
 }
 
 .contact-form button[type="submit"] {
-	margin: auto;
-	display: block;
-	font-weight: 600;
+	background-color: var(--blue);
 	border: none;
+	border-radius: 8px;
+	color: var(--light-golden);
 	cursor: pointer;
-	width: 82%;
+	display: block;
+	font-family: 'Poppins';
+	font-size: var(--md);
+	font-style: normal;
+	font-weight: 600;
+	margin: auto;
 	padding: 10px;
-	border-radius: 5px;
-	font-size: 16px;
 	transition: .3s ease all;
-	background: var(--blue);
-    border-radius: 8px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-size: var(--md);
-    color: var(--light-golden);
+	width: 82%;
 }
 
 .contact-form button[type="submit"]:hover {
@@ -89,10 +85,10 @@ h1.contact-input-f{
 }
 
 .contact-form .exito {
-	text-align: center;
+	color: #02a802;
 	font-size: var(--md);
 	padding-top: 20px;
-	color: #02a802;
+	text-align: center;
 }
 
 .contact-form input[type="radio"] {

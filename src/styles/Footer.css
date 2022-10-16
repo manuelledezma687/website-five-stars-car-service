@@ -1,10 +1,9 @@
-
 .main-footer {
-  color: white;
+  bottom: 0;
   background-color: var(--blue);
+  color: var(--white);
   padding-top: 3em;
   position: relative;
-  bottom: 0;
   width: 100%;
 }
 
@@ -14,11 +13,11 @@
 }
 
 .col {
-  margin: auto;
   font-size: var(--ssm);
+  margin: auto;
 }
 
-#terms {
+#terms-block {
   text-align: center;
 }
 
@@ -29,20 +28,18 @@
 #social-networks {
   display: flex;
   margin: 0;
-
 }
 
-#social{
-  width: 50px;
+#social {
   height: 50px;
   margin-right: 4%;
-
+  width: 50px;
 }
 
 .email-contact {
-  font-size: var(-ssm);
-  padding-top: 10px;
+  font-size: var(--ssm);
   font-style: italic;
+  padding-top: 10px;
 }
 
 
@@ -54,10 +51,11 @@
   }
 }
 
+
 @media (max-width: 390px) {
 
-h4.email-contact {
-  font-size: 0.8rem;
-  width: auto;
-}
+  h4.email-contact {
+    font-size: 0.8rem;
+    width: auto;
+  }
 }

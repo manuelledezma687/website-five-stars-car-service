@@ -3,7 +3,7 @@ import axios from "axios";
 
 const useGetRatings = (API) => {
 
-const [ratings, setRatings] = useState([]);
+  const [ratings, setRatings] = useState([]);
 
 
   async function fetchData() {

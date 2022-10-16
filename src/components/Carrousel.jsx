@@ -1,11 +1,13 @@
 import React from 'react';
+
 import '../styles/Carrousel.css';
+
 import camry from '../assets/img-slider/camry.png';
 import corolla from '../assets/img-slider/corolla.png';
 
-const Carrousel=() => {
+export function Carrousel() {
 
-	return (
+    return (
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -24,15 +26,5 @@ const Carrousel=() => {
                 </button>
             </div>
         </div>
-	);
+    );
 }
-
-export default Carrousel;
-
-
-
-
-
-
-
-

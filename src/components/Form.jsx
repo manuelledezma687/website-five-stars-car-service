@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/Form.css';
-import pointer from '../assets/icons/point.svg';
 import { motion } from "framer-motion"
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 

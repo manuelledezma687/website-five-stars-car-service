@@ -1,9 +1,9 @@
-.service-main{
+.service-main {
+    display: block;
     margin: 2rem 0 0 0;
-    display:block;
     position: relative;
-    width: 100%;
     text-align: center;
+    width: 100%;
 }
 
 .services-title {
@@ -20,43 +20,32 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0var(--deka);
-    width: 100%; 
     padding-bottom: 20px;
+    width: 100%;
 }
 
 .card-title {
     padding-top: 10px;
 }
 
-
-#services {
-    margin: 0;
-}
-.container-service {
-    width: 30%;
-    align-self: center;
-    top: 0;
-}
-
-#image-service{
-    text-align: center;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    width: 180px;
-    margin: auto;
+#image-service {
     display: block;
+    flex: none;
+    flex-grow: 0;
+    margin: auto;
+    order: 0;
+    text-align: center;
+    width: 180px;
 }
 
 #p-service {
-    font-size: var(--sm);
-    color: var(--black);
-    text-align: center;
     align-content: center;
     border: hidden;
+    color: var(--black);
+    font-size: var(--sm);
     padding: 20px 20px 20px 20px;
+    text-align: center;
 }
-
 
 
 @media (max-width: 1026px) {
@@ -64,4 +53,5 @@
     .service-list {
         display: block;
         margin: auto;
-    }}
+    }
+}
