@@ -15,24 +15,24 @@ const Form = () => {
                     fixed: 0
                 }}
                 className='title'>Quote your trip and book with us, to live the <span> best experience.</span>&nbsp;Just in time with <span>FiveStars.</span></motion.h1>
-            <form class="p-4 p-md-5 border rounded-3 needs-validation" novalidate id='form' method="post" action="">
+            <form class="p-4 p-md-5 border rounded-3 needs-validation" noValidate id='form' method="post" action="">
 
                 <div class="row" id='google'>
                     <label htmlFor="" id='label-google'>Pick Up</label>
                     <GooglePlacesAutocomplete apikey="AIzaSyCW8RbW836MOX6bO0aCh56ptNLqurt4vYg" type="text" placeholder="Pick Up" required
-                        name="pick_up" maxlength="100" />
+                        name="pick_up" maxLength="100" />
                     <label htmlFor="" id='label-google'>Destiny</label>
                     <GooglePlacesAutocomplete apikey="AIzaSyCW8RbW836MOX6bO0aCh56ptNLqurt4vYg" type="text" class="form-control" id="destiny" placeholder="Drop Off" required
-                        name="destiny" maxlength="50" />
+                        name="destiny" maxLength="50" />
                 </div>
                 <div class="row" id="double-input">
                     <div class="col input-btn-padding-x mb-3">
                         <input type="text" class="form-control" id="floatingInput" placeholder="Full Name" required
-                            name="full_name" maxlength="50" />
+                            name="full_name" maxLength="50" />
                     </div>
                     <div class="col input-btn-padding-x mb-3">
                         <input type="email" class="form-control" id="floatingInput" placeholder="youremail@example.com"
-                            required name="email" maxlength="50" />
+                            required name="email" maxLength="50" />
                     </div>
                 </div>
                 <div class="row" id="double-input">
@@ -48,11 +48,11 @@ const Form = () => {
                 <div class="row" id="double-input">
                     <div class="col input-btn-padding-x mb-3">
                         <input type="text" class="form-control" id="floatingInput" placeholder="Fight" required
-                            name="flight" maxlength="20" />
+                            name="flight" maxLength="20" />
                     </div>
                     <div class="col input-btn-padding-x mb-3">
                         <select class="form-select" placeholder="payment method" required name="payment_method"
-                            maxlength="12">
+                            maxLength="12">
                             <option selected disabled value="">Payment Method</option>
                             <option value="cash">Cash</option>
                             <option value="paypal">Paypal</option>
@@ -78,11 +78,11 @@ const Form = () => {
                     </div>
                     <div class="row input-btn-padding-x mb-3">
                         <input type="text" class="form-control" id="floatingInput" placeholder="observations" required
-                            name="observations" maxlength="100" />
+                            name="observations" maxLength="100" />
                     </div>
                     <div class="row input-btn-padding-x mb-3">
                         <select class="form-select" placeholder="type of travel" required name="type_of_travel"
-                            maxlength="12">
+                            maxLength="12">
                             <option selected disabled value="">Type of Travel</option>
                             <option value="hourly">Hourly</option>
                             <option value="way">On the way</option>
