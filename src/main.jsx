@@ -19,8 +19,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Hero />
         <Carrousel />
         <Services />
-        <RatingMock />
-        {/* <RatingContainer /> */}
+        {/* <RatingMock /> */}
+        <RatingContainer />
         <Contact />
         <Footer />
     </React.StrictMode>

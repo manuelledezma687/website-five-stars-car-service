@@ -6,7 +6,7 @@ import Ratings from '../components/Ratings';
 import useGetRatings from '../hooks/useGetRatings';
 
 
-const API = 'http://127.0.0.1:8000/ratings?limit=3';
+const API = 'https://fivestarscarservice.herokuapp.com/ratings?limit=3';
 
 const RatingContainer = () => {
 
