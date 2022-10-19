@@ -24,5 +24,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Contact />
         <Footer />
     </React.StrictMode>
-// https://fivestarscarservice.herokuapp.com/
 );

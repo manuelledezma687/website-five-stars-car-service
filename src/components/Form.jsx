@@ -1,13 +1,16 @@
 import React from 'react';
 import { motion } from "framer-motion"
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
-import sendBookingForm from '../hooks/sendBookingForm';
 
 import '../styles/Form.css';
+import usePostBookings from '../hooks/usePostBookings';
+
+const API = 'https://fivestarscarservice.herokuapp.com/bookings';
 
 const Form = () => {
 
-	const form = sendBookingForm();
+    const bookings = usePostBookings(API);
+    
 
     return (
         <div className='main-form' id='booking'>
@@ -18,7 +21,7 @@ const Form = () => {
                     fixed: 0
                 }}
                 className='title'>Quote your trip and book with us, to live the <span> best experience.</span>&nbsp;Just in time with <span>FiveStars.</span></motion.h1>
-            <form class="p-4 p-md-5 border rounded-3 needs-validation" id='form' method="post" action="">
+            <form class="p-4 p-md-5 border rounded-3 needs-validation" novalidate id='form' method="post" action="">
 
                 <div class="row" id='google'>
                     <label htmlFor="" id='label-google'>Pick Up</label>
