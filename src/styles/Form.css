@@ -81,3 +81,17 @@
     background: var(--golden);
     color: var(--black);
 }
+
+.exito {
+	color: #02a802;
+	font-size: var(--md);
+	padding-top: 20px;
+	text-align: center;
+}
+
+.booking-error {
+	color: var(--red);
+	font-size: var(--ssm);
+	font-weight: 600;
+	margin-left: 10%;
+}

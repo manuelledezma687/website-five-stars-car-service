@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import '../styles/Hero.css';
 
 import corolla from '../assets/images/white-corolla.png';
-import Form from '../components/Form';
+import { FormBooking } from '../components/FormBooking';
 
 export function Hero() {
     return (
@@ -25,7 +25,7 @@ export function Hero() {
                     }}
                     src={corolla} alt="Toyota Corolla" className="white-corolla" />
             </div>
-            <Form />
+            <FormBooking />
         </section>
 
     );
