@@ -16,7 +16,7 @@ export function Home(){
 
     return(
         <><Header />
-        <CookieConsent debug={true} style={{fontFamily: 'Poppins', fontSize: "1rem"}}>
+        <CookieConsent debug={false} style={{fontFamily: 'Poppins', fontSize: "1rem"}}>
         In accordance with the law and in action with our <a href="/privacy">privacy section</a> , we proceed to request your authorization to use cookies on our site
         </CookieConsent>
         <Hero /><Carrousel /><Services /><RatingContainer /><Contact /><Footer /></>
