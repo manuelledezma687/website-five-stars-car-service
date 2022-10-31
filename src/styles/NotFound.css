@@ -1,0 +1,36 @@
+#not-found {
+    display: block;
+    justify-content: space-between;
+    margin: 4rem 0 0 0;
+    padding-left: 2%;
+    text-align: center;
+}
+
+#not-found  h1 {
+    color: var(--golden);
+    font-size: 10rem;
+}
+
+#not-found p {
+    align-items: center;
+    color: var(--black);
+    font-size: 3rem;
+    font-style: normal;
+    height: 104px;
+    line-height: 38px;
+}
+
+@media (max-width: 859px) {
+
+    #not-found p {
+        font-size: 2rem;
+    }
+    
+  }
+  
+  @media (max-width: 390px) {
+
+    #not-found p {
+        font-size: 1rem;
+    }
+    }

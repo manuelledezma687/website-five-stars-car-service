@@ -1,27 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import './styles/global.css';
 
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { Services } from './components/Services';
-import RatingMock from './components/RatingMock';
-import { Footer } from './components/Footer';
-import { Contact } from './components/Contact';
-import { Carrousel } from "./components/Carrousel";
-import RatingContainer from './containers/RatingContainer';
+import { Home } from './pages/Home';
+import { Privacy } from "./pages/Privacy";
+import { Faqs } from "./pages/Faqs";
+import { NotFound } from "./pages/NotFound";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-        <Header />
-        <Hero />
-        <Carrousel />
-        <Services />
-        {/* <RatingMock /> */}
-        <RatingContainer />
-        <Contact />
-        <Footer />
-    </React.StrictMode>
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/privacy" element={<Privacy/>}/>
+            <Route path="/faqs" element={<Faqs/>}/>
+            <Route path="*" element={<NotFound/>}/>
+        </Routes>
+    </BrowserRouter>
 );

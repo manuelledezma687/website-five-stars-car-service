@@ -1,0 +1,35 @@
+.privacy {
+    align-items: center;
+    background-attachment: fixed;
+    background-color: var(--blue);
+    background-image: url('../assets/images/bg.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 0;
+}
+
+
+h1.privacy-title {
+    color: var(--white);
+    font-size: var(--eg);
+    padding-top: 5%;
+    width: auto;
+}
+
+.container-privacy {
+    background-color: var(--white);    
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px var(--black);
+    color: var(--black);
+    font-weight: 500;
+    margin: 5% 5% 5% 5%;
+    opacity: 90%;
+    padding: 30px 30px 20px 20px;
+    text-align: justify;
+    width: max-content;
+}
+

@@ -42,6 +42,9 @@
   padding-top: 10px;
 }
 
+#terms-block a {
+  color: var(--white);
+}
 
 @media (max-width: 859px) {
 

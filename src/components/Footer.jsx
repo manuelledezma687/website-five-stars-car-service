@@ -33,8 +33,8 @@ export function Footer() {
       <hr />
       <div class="row" id="terms-block">
         <p className="terms">
-          &copy;{new Date().getFullYear()} Five Stars Car Service | All rights reserved |
-          Terms Of Service | Privacy
+          &copy;{new Date().getFullYear()} Five Stars Car Service | All rights reserved | <a href="/">FAQS</a>  | <a href="/privacy">Privacy Policy</a>| developed by<a href="/"> K&L Solutions</a>
+          
         </p>
       </div>
     </footer>
