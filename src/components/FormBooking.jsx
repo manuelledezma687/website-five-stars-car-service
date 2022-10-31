@@ -6,7 +6,8 @@ import axios from "axios";
 import '../styles/Form.css';
 import '../styles/Contact.css';
 
-const API_KEY = "AIzaSyCW8RbW836MOX6bO0aCh56ptNLqurt4vYg"
+
+const API_KEY = import.meta.env.API_KEY_GOOGLE
 
 export function FormBooking() {
 
@@ -23,19 +24,13 @@ export function FormBooking() {
             payment_method,
             passengers,
             observations,
+            referrals,
             type_of_service
         }).then(res => console.log('Posting data', res)).catch(err => console.log(err))
     }
 
     const [pick_up_location, setPickUpLocation] = useState('')
     const [drop_off_location, setDropOff] = useState('')
-
-    // useEffect(() => {
-    //     pick_up_location === "" ? setPickUpLocation("") : setPickUpLocation(pick_up_location.label);
-    //     drop_off_location === "" ? setDropOff("") : setDropOff(drop_off_location.label);
-    //   }, [pick_up_location],[drop_off_location]);
-
-
     const [full_name, setFullName] = useState('')
     const [email, setEmail] = useState('')
     const [hour, setHour] = useState('')
@@ -44,6 +39,7 @@ export function FormBooking() {
     const [payment_method, setPaymentMethod] = useState('')
     const [passengers, setPassengers] = useState('')
     const [observations, setObservations] = useState('')
+    const [referrals, setReferrals] = useState('')
     const [type_of_service, setTypeOfService] = useState('')
 
 
@@ -62,11 +58,13 @@ export function FormBooking() {
             <form class="p-4 p-md-5 border rounded-3" id='form' method="post" >
                 <div class="row" id='google'>
                     <label htmlFor="" id='label-google'>Pick Up</label>
-                    <GooglePlacesAutocomplete selectProps={{ defaultInputValue:pick_up_location, onChange: setPickUpLocation, isClearable: true, placeholder: "Select your address" }} query={{ key: API_KEY }}
+                    <GooglePlacesAutocomplete 
+    selectProps={{ defaultInputValue:pick_up_location, onChange: setPickUpLocation, isClearable: true, placeholder: "Select your address" }} query={{ key: API_KEY }}
                         fetchDetails={true}
-                        onFail={error => console.log(error)} value={pick_up_location.label} />
+                        onFail={error => console.log(error)}/>
                     <label htmlFor="" id='label-google'>Destiny</label>
-                    <GooglePlacesAutocomplete selectProps={{ defaultInputValue:drop_off_location, onChange: setDropOff, isClearable: true, placeholder: "Select your address" }} query={{ key: API_KEY }}
+                    <GooglePlacesAutocomplete selectProps={{ defaultInputValue:drop_off_location, onChange: setDropOff, isClearable: true, placeholder: "Select your address" }} query={{ key: API_KEY }} 
+                        
                         fetchDetails={true}
                         onFail={error => console.log(error)} />
                 </div>
@@ -173,6 +171,19 @@ export function FormBooking() {
                             name="observations"
                             maxLength="100"
                         />
+                        
+                    </div>
+                    <div class="row input-btn-padding-x mb-3">
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="referrals"
+                            value={referrals} onChange={(e) => setReferrals(e.target.value)}
+                            placeholder="Referral Corde 10% OFF DISCOUNT"
+                            name="referrals"
+                            maxLength="20"
+                        />
+                        
                     </div>
                     <div class="row input-btn-padding-x mb-3">
                         <select
