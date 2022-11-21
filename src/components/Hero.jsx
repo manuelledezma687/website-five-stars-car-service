@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import '../styles/Hero.css';
 
 import corolla from '../assets/images/white-corolla.png';
-import { FormBooking } from '../components/FormBooking';
+import FormBooking from './FormBooking2';
 
 export function Hero() {
     return (

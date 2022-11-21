@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from "framer-motion";
 import axios from "axios";
 
@@ -6,45 +6,60 @@ import '../styles/Form.css';
 import '../styles/Contact.css';
 
 
-const API_KEY = import.meta.env.API_KEY_GOOGLE
 
-export function FormBooking() {
-
-
-    const postData = (e) => {
-        e.preventDefault();
-        axios.post("https://fivestarscarservice.com/bookings.php", {
-            pick_up_location,
-            drop_off_location,
-            full_name,
-            email,
-            hour,
-            date_booking,
-            flight_id,
-            payment_method,
-            passengers,
-            observations,
-            referrals,
-            type_of_service
-        }).then(res => console.log('Posting data', res)).catch(err => console.log(err))
+class FormBooking extends React.Component {
+    state = {
+        pick_up_location:'',
+        drop_off_location:'',
+        full_name:'',
+        email:'',
+        hour:'',
+        date_booking:'',
+        flight_id:'',
+        payment_method:'',
+        passengers:'',
+        observations:'',
+        referrals:'',
+        type_of_service:''
     }
+   
 
-    const [pick_up_location, setPickUpLocation] = useState('')
-    const [drop_off_location, setDropOff] = useState('')
-    const [full_name, setFullName] = useState('')
-    const [email, setEmail] = useState('')
-    const [hour, setHour] = useState('')
-    const [date_booking, setDate] = useState('')
-    const [flight_id, setFlightId] = useState('')
-    const [payment_method, setPaymentMethod] = useState('')
-    const [passengers, setPassengers] = useState('')
-    const [observations, setObservations] = useState('')
-    const [referrals, setReferrals] = useState('')
-    const [type_of_service, setTypeOfService] = useState('')
+    handleFormSubmit( event ) {
+        event.preventDefault();
+   
+        let formData = new FormData();
+        formData.append('pick_up_location', this.state.pick_up_location)
+        formData.append('drop_off_location', this.state.drop_off_location)
+        formData.append('full_name', this.state.full_name)
+        formData.append('email', this.state.email)
+        formData.append('hour', this.state.hour)
+        formData.append('date_booking', this.state.date_booking)
+        formData.append('flight_id', this.state.flight_id)
+        formData.append('payment_method', this.state.payment_method)
+        formData.append('passengers', this.state.passengers)
+        formData.append('observations', this.state.observations)
+        formData.append('referrals', this.state.referrals)
+        formData.append('type_of_service', this.state.type_of_service)
 
-
-
-    return (
+        axios({
+            method: 'post',
+            url: 'https://fivestarscarservice.com/bookings.php',
+            data: formData,
+            config: { headers: {'Content-Type': 'multipart/form-data' }}
+        })
+        .then(function (response) {
+            //handle success
+            console.log(response)
+            alert('Congratulations, your booking was registered.');  
+        })
+        .catch(function (response) {
+            //handle error
+            console.log(response)
+        });
+    }
+   
+    render() {
+      return (
         <div className='main-form' id='booking'>
             <motion.h1
                 whileHover={{
@@ -62,7 +77,7 @@ export function FormBooking() {
                     <input
                             type="text"
                             class="form-control"
-                            value={pick_up_location} onChange={(e) => setPickUpLocation(e.target.value)}
+                            value={this.state.pick_up_location} onChange={e => this.setState({ pick_up_location: e.target.value })}
                             id="pick_up_location"
                             placeholder="Type Your Adress"
                             name="pick_up_location"
@@ -74,7 +89,7 @@ export function FormBooking() {
                     <input
                             type="text"
                             class="form-control"
-                            value={drop_off_location} onChange={(e) => setDropOff(e.target.value)}
+                            value={this.state.drop_off_location} onChange={e => this.setState({ drop_off_location: e.target.value })}
                             id="drop_off_location"
                             placeholder="Type Your Adress"
                             name="drop_off_location"
@@ -87,7 +102,7 @@ export function FormBooking() {
                         <input
                             type="text"
                             class="form-control"
-                            value={full_name} onChange={(e) => setFullName(e.target.value)}
+                            value={this.state.full_name} onChange={e => this.setState({ full_name: e.target.value })}
                             id="full_name"
                             placeholder="Full Name"
                             name="full_name"
@@ -99,7 +114,7 @@ export function FormBooking() {
                             type="email"
                             class="form-control"
                             id="email"
-                            value={email} onChange={(e) => setEmail(e.target.value)}
+                            value={this.state.email} onChange={e => this.setState({ email: e.target.value })}
                             placeholder="youremail@example.com"
                             name="email"
                             maxLength="50" />
@@ -111,7 +126,7 @@ export function FormBooking() {
                             type="time"
                             class="form-control"
                             id="hour"
-                            value={hour} onChange={(e) => setHour(e.target.value)}
+                            value={this.state.time} onChange={e => this.setState({ time: e.target.value })}
                             placeholder="hour"
                             name="date_time"
                         />
@@ -121,7 +136,7 @@ export function FormBooking() {
                             type="date"
                             class="form-control"
                             id="date_booking"
-                            value={date_booking} onChange={(e) => setDate(e.target.value)}
+                            value={this.state.date_booking} onChange={e => this.setState({ date_booking: e.target.value })}
                             placeholder="Date"
                             name="date_booking"
                         />
@@ -133,7 +148,7 @@ export function FormBooking() {
                             type="text"
                             class="form-control"
                             id="flight_id"
-                            value={flight_id} onChange={(e) => setFlightId(e.target.value)}
+                            value={this.state.flight_id} onChange={e => this.setState({ flight_id: e.target.value })}
                             placeholder="Flight Number"
                             name="flight"
                             maxLength="20"
@@ -144,7 +159,7 @@ export function FormBooking() {
                             class="form-select"
                             placeholder="payment method"
                             id='payment_method'
-                            value={payment_method} onChange={(e) => setPaymentMethod(e.target.value)}
+                            value={this.state.payment_method} onChange={e => this.setState({ payment_method: e.target.value })}
                             name="payment_method"
                             maxLength="12"
                         >
@@ -161,7 +176,7 @@ export function FormBooking() {
                                 type="text"
                                 class="form-select"
                                 id="passengers"
-                                value={passengers} onChange={(e) => setPassengers(e.target.value)} placeholder="passengers"
+                                value={this.state.passengers} onChange={e => this.setState({ passengers: e.target.value })} placeholder="passengers"
                                 name="passengers" >
                                 <option selected disabled value="">Passengers</option>
                                 <option value="1">1</option>
@@ -180,7 +195,7 @@ export function FormBooking() {
                             type="text"
                             class="form-control"
                             id="observations"
-                            value={observations} onChange={(e) => setObservations(e.target.value)}
+                            value={this.state.observations} onChange={e => this.setState({ observations: e.target.value })}
                             placeholder="observations"
                             name="observations"
                             maxLength="100"
@@ -192,7 +207,7 @@ export function FormBooking() {
                             type="text"
                             class="form-control"
                             id="referrals"
-                            value={referrals} onChange={(e) => setReferrals(e.target.value)}
+                            value={this.state.referrals} onChange={e => this.setState({ referrals: e.target.value })}
                             placeholder="Referral Corde 10% OFF DISCOUNT"
                             name="referrals"
                             maxLength="20"
@@ -205,7 +220,7 @@ export function FormBooking() {
                             class="form-select"
                             id="type_of_service"
                             placeholder="type of service"
-                            value={type_of_service} onChange={(e) => setTypeOfService(e.target.value)}
+                            value={this.state.type_of_service} onChange={e => this.setState({ type_of_service: e.target.value })}
                             name="type_of_service"
                         >
                             <option selected disabled value="">Type of Service</option>
@@ -214,11 +229,12 @@ export function FormBooking() {
                         </select>
                     </div>
                 </div>
-                <button id="button" onClick={postData} class="w-100 btn btn-lg btn-primary" type="submit">Book your Trip</button>
+                <button id="button" onClick={e => this.handleFormSubmit(e)} class="w-100 btn btn-lg btn-primary" type="submit">Book your Trip</button>
                 <hr class="my-4" />
                 <small class="text-muted">By clicking Your Booking, you agree to the terms of use.</small>
             </form>
         </div>
     );
-            
 }
+}
+export default FormBooking ;

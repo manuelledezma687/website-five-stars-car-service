@@ -25,7 +25,4 @@ dist-ssr
 .htaccess
 
 ## php
-bookings.php
-contact.php
-ratings.php
-referrals.php
+con_db.php
