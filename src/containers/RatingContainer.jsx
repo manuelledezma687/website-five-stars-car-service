@@ -6,7 +6,7 @@ import Ratings from '../components/Ratings';
 import useGetRatings from '../hooks/useGetRatings';
 
 
-const API = 'https://fivestarscarservice.herokuapp.com/ratings?limit=3';
+const API = 'https://fivestarscarservice.com/ratings.php';
 
 const RatingContainer = () => {
 

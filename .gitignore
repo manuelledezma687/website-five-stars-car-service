@@ -23,3 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 .htaccess
+
+## php
+bookings.php
+contact.php
+ratings.php
+referrals.php

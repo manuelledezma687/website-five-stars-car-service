@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
-import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 import axios from "axios";
 
 import '../styles/Form.css';
@@ -11,15 +10,16 @@ const API_KEY = import.meta.env.API_KEY_GOOGLE
 
 export function FormBooking() {
 
+
     const postData = (e) => {
         e.preventDefault();
-        axios.post("http://127.0.0.1:8000/bookings", {
+        axios.post("https://fivestarscarservice.com/bookings.php", {
             pick_up_location,
             drop_off_location,
             full_name,
             email,
             hour,
-            date,
+            date_booking,
             flight_id,
             payment_method,
             passengers,
@@ -34,7 +34,7 @@ export function FormBooking() {
     const [full_name, setFullName] = useState('')
     const [email, setEmail] = useState('')
     const [hour, setHour] = useState('')
-    const [date, setDate] = useState('')
+    const [date_booking, setDate] = useState('')
     const [flight_id, setFlightId] = useState('')
     const [payment_method, setPaymentMethod] = useState('')
     const [passengers, setPassengers] = useState('')
@@ -57,16 +57,30 @@ export function FormBooking() {
 
             <form class="p-4 p-md-5 border rounded-3" id='form' method="post" >
                 <div class="row" id='google'>
+                <div class="row input-btn-padding-x mb-3">
                     <label htmlFor="" id='label-google'>Pick Up</label>
-                    <GooglePlacesAutocomplete 
-    selectProps={{ defaultInputValue:pick_up_location, onChange: setPickUpLocation, isClearable: true, placeholder: "Select your address" }} query={{ key: API_KEY }}
-                        fetchDetails={true}
-                        onFail={error => console.log(error)}/>
+                    <input
+                            type="text"
+                            class="form-control"
+                            value={pick_up_location} onChange={(e) => setPickUpLocation(e.target.value)}
+                            id="pick_up_location"
+                            placeholder="Type Your Adress"
+                            name="pick_up_location"
+                            maxLength="50"
+                        />
+                    </div>
+                    <div class="row input-btn-padding-x mb-3">
                     <label htmlFor="" id='label-google'>Destiny</label>
-                    <GooglePlacesAutocomplete selectProps={{ defaultInputValue:drop_off_location, onChange: setDropOff, isClearable: true, placeholder: "Select your address" }} query={{ key: API_KEY }} 
-                        
-                        fetchDetails={true}
-                        onFail={error => console.log(error)} />
+                    <input
+                            type="text"
+                            class="form-control"
+                            value={drop_off_location} onChange={(e) => setDropOff(e.target.value)}
+                            id="drop_off_location"
+                            placeholder="Type Your Adress"
+                            name="drop_off_location"
+                            maxLength="50"
+                        />
+                        </div>
                 </div>
                 <div class="row" id="double-input">
                     <div class="col input-btn-padding-x mb-3">
@@ -106,10 +120,10 @@ export function FormBooking() {
                         <input
                             type="date"
                             class="form-control"
-                            id="date"
-                            value={date} onChange={(e) => setDate(e.target.value)}
+                            id="date_booking"
+                            value={date_booking} onChange={(e) => setDate(e.target.value)}
                             placeholder="Date"
-                            name="date"
+                            name="date_booking"
                         />
                     </div>
                 </div>
@@ -206,4 +220,5 @@ export function FormBooking() {
             </form>
         </div>
     );
+            
 }

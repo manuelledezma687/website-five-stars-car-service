@@ -1,0 +1,21 @@
+
+.nav-backoffice {
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: var(--md);
+}
+
+.menu  {
+    list-style: none;
+    display: flex;
+}
+
+.menu-item {
+    margin-left: 20px;
+    padding: 10px 10px 10px 10px;
+}
+
+.menu-item:hover {
+    color: var(--black);
+    background-color: var(--golden);
+}
