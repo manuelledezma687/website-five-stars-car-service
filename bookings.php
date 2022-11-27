@@ -24,14 +24,6 @@ switch ($method) {
 
       $sql = "INSERT into bookings (pick_up_location, drop_off_location, full_name, email, hour, date_booking, flight_id, payment_method, passengers, observations, referrals, type_of_service) values ('$pick_up_location', '$drop_off_location', '$full_name', '$email', '$hour', '$date_booking', '$flight_id', '$payment_method', '$passengers', '$observations', '$referrals', '$type_of_service')"; 
       break;
-      // case "POST":
-      //   $header = "From: manuelledezma687@gmail.com";
-      //   $header = "Reply-To: manuelledezma687@gmail.com";
-      //   $header = "X-Mailer: PHP/".phpversion();
-      //   $mail = mail($pick_up_location,$full_name)
-      //   if ($mail) {
-      //     echo "Mail enviado";
-      //   }
 }
 
 // run SQL statement
