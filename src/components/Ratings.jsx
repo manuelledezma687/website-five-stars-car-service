@@ -16,7 +16,7 @@ const Ratings = ({ rating }) => {
 				fixed: 0
 			}}
 			id='testimonials'>
-			<p className='comments'>"{rating.comments}</p>
+			<p className='comments'>"{rating.comments}..."</p>
 			<h2 className='name-customer'>{rating.first_name} {rating.last_name}</h2>
 			<div class="starring">
 				<div class="stars">

@@ -2,8 +2,9 @@ import React from 'react';
 
 import '../styles/Carrousel.css';
 
-import camry from '../assets/img-slider/camry.png';
-import corolla from '../assets/img-slider/corolla.png';
+import camry from '../assets/img-slider/camry.jpg';
+import corolla from '../assets/img-slider/corolla.jpg';
+import chevrolet from '../assets/img-slider/chevrolet.jpg';
 
 export function Carrousel() {
 
@@ -15,6 +16,9 @@ export function Carrousel() {
                 </div>
                 <div class="carousel-item">
                     <img src={corolla} class="d-block w-100" alt="Toyota Corolla" />
+                </div>
+                <div class="carousel-item">
+                    <img src={chevrolet} class="d-block w-100" alt="Chevrolet" />
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
