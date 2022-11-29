@@ -19,13 +19,13 @@ const Ratings = ({ rating }) => {
                         </div>
                         <div className="starring">
                             <div className="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
                             </div>
-                            <h4 class="date">Created at Oct. 14, 2022, 1:51 p.m.</h4>
+                            <h4 className="date">Created at Oct. 14, 2022, 1:51 p.m.</h4>
                         </div>
                     </li>
                     <li id='testimonials'>
@@ -38,13 +38,13 @@ const Ratings = ({ rating }) => {
                         </div>
                         <div className="starring">
                             <div className="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
                             </div>
-                            <h4 class="date">Created at Oct. 14, 2022, 1:51 p.m.</h4>
+                            <h4 className="date">Created at Oct. 14, 2022, 1:51 p.m.</h4>
                         </div>
                     </li>
                     <li id='testimonials'>
@@ -57,13 +57,13 @@ const Ratings = ({ rating }) => {
                         </div>
                         <div className="starring">
                             <div className="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
                             </div>
-                            <h4 class="date">Created at Oct. 14, 2022, 1:51 p.m.</h4>
+                            <h4 className="date">Created at Oct. 14, 2022, 1:51 p.m.</h4>
                         </div>
                     </li>
                 </ul>
