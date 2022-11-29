@@ -12,7 +12,7 @@ export function Faqs() {
         <div className="faq-list">
           <div className="question-box">
             <h2>Question</h2>
-            <p class="card-text" id="response">
+            <p className="card-text" id="response">
               Email addressent will be collectety. (This includes: Zelle, and any other forms of online payment we may offer.)</p>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion";
+
 import axios from "axios";
 
 import '../styles/Form.css';
@@ -7,6 +8,7 @@ import '../styles/Contact.css';
 
 
 class FormBooking extends React.Component {
+
     state = {
         pick_up_location:'',
         drop_off_location:'',
@@ -25,7 +27,6 @@ class FormBooking extends React.Component {
 
     handleFormSubmit( event ) {
         event.preventDefault();
-   
         let formData = new FormData();
         formData.append('pick_up_location', this.state.pick_up_location)
         formData.append('drop_off_location', this.state.drop_off_location)
@@ -47,12 +48,10 @@ class FormBooking extends React.Component {
             config: { headers: {'Content-Type': 'multipart/form-data' }}
         })
         .then(function (response) {
-            //handle success
             console.log(response)
             alert('Congratulations, your booking was registered.');  
         })
         .catch(function (response) {
-            //handle error
             console.log(response)
         });
     }
@@ -69,13 +68,13 @@ class FormBooking extends React.Component {
                 className='title'>Quote your trip and book with us, to live the <span> best experience.</span>&nbsp;Just in time with <span>FiveStars.</span></motion.h1>
 
 
-            <form class="p-4 p-md-5 border rounded-3" id='form' method="post" >
-                <div class="row" id='google'>
-                <div class="row input-btn-padding-x mb-3">
+            <form className="p-4 p-md-5 border rounded-3" id='form' method="post">
+                <div className="row" id='google'>
+                <div className="row input-btn-padding-x mb-3">
                     <label htmlFor="" id='label-google'>Pick Up</label>
                     <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             value={this.state.pick_up_location} onChange={e => this.setState({ pick_up_location: e.target.value })}
                             id="pick_up_location"
                             placeholder="Type Your Adress"
@@ -83,11 +82,11 @@ class FormBooking extends React.Component {
                             maxLength="50"
                         />
                     </div>
-                    <div class="row input-btn-padding-x mb-3">
+                    <div className="row input-btn-padding-x mb-3">
                     <label htmlFor="" id='label-google'>Destiny</label>
                     <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             value={this.state.drop_off_location} onChange={e => this.setState({ drop_off_location: e.target.value })}
                             id="drop_off_location"
                             placeholder="Type Your Adress"
@@ -96,11 +95,11 @@ class FormBooking extends React.Component {
                         />
                         </div>
                 </div>
-                <div class="row" id="double-input">
-                    <div class="col input-btn-padding-x mb-3">
+                <div className="row" id="double-input">
+                    <div className="col input-btn-padding-x mb-3">
                         <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             value={this.state.full_name} onChange={e => this.setState({ full_name: e.target.value })}
                             id="full_name"
                             placeholder="Full Name"
@@ -108,10 +107,10 @@ class FormBooking extends React.Component {
                             maxLength="50"
                         />
                     </div>
-                    <div class="col input-btn-padding-x mb-3">
+                    <div className="col input-btn-padding-x mb-3">
                         <input
                             type="email"
-                            class="form-control"
+                            className="form-control"
                             id="email"
                             value={this.state.email} onChange={e => this.setState({ email: e.target.value })}
                             placeholder="youremail@example.com"
@@ -119,21 +118,21 @@ class FormBooking extends React.Component {
                             maxLength="50" />
                     </div>
                 </div>
-                <div class="row" id="double-input">
-                    <div class="col input-btn-padding-x mb-3">
+                <div className="row" id="double-input">
+                    <div className="col input-btn-padding-x mb-3">
                         <input
                             type="time"
-                            class="form-control"
+                            className="form-control"
                             id="hour"
                             value={this.state.time} onChange={e => this.setState({ time: e.target.value })}
                             placeholder="hour"
                             name="date_time"
                         />
                     </div>
-                    <div class="col input-btn-padding-x mb-3">
+                    <div className="col input-btn-padding-x mb-3">
                         <input
                             type="date"
-                            class="form-control"
+                            className="form-control"
                             id="date_booking"
                             value={this.state.date_booking} onChange={e => this.setState({ date_booking: e.target.value })}
                             placeholder="Date"
@@ -141,11 +140,11 @@ class FormBooking extends React.Component {
                         />
                     </div>
                 </div>
-                <div class="row" id="double-input">
-                    <div class="col input-btn-padding-x mb-3">
+                <div className="row" id="double-input">
+                    <div className="col input-btn-padding-x mb-3">
                         <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             id="flight_id"
                             value={this.state.flight_id} onChange={e => this.setState({ flight_id: e.target.value })}
                             placeholder="Flight Number"
@@ -153,9 +152,9 @@ class FormBooking extends React.Component {
                             maxLength="20"
                         />
                     </div>
-                    <div class="col input-btn-padding-x mb-3">
+                    <div className="col input-btn-padding-x mb-3">
                         <select
-                            class="form-select"
+                            className="form-select"
                             placeholder="payment method"
                             id='payment_method'
                             value={this.state.payment_method} onChange={e => this.setState({ payment_method: e.target.value })}
@@ -168,12 +167,12 @@ class FormBooking extends React.Component {
                         </select>
                     </div>
                 </div>
-                <div class="row" id="double-input">
-                    <div class="col input-btn-padding-x mb-3">
+                <div className="row" id="double-input">
+                    <div className="col input-btn-padding-x mb-3">
                         <div id="passengers-list">
                             <select
                                 type="text"
-                                class="form-select"
+                                className="form-select"
                                 id="passengers"
                                 value={this.state.passengers} onChange={e => this.setState({ passengers: e.target.value })} placeholder="passengers"
                                 name="passengers" >
@@ -189,10 +188,10 @@ class FormBooking extends React.Component {
                             </select>
                         </div>
                     </div>
-                    <div class="row input-btn-padding-x mb-3">
+                    <div className="row input-btn-padding-x mb-3">
                         <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             id="observations"
                             value={this.state.observations} onChange={e => this.setState({ observations: e.target.value })}
                             placeholder="observations"
@@ -201,10 +200,10 @@ class FormBooking extends React.Component {
                         />
                         
                     </div>
-                    <div class="row input-btn-padding-x mb-3">
+                    <div className="row input-btn-padding-x mb-3">
                         <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             id="referrals"
                             value={this.state.referrals} onChange={e => this.setState({ referrals: e.target.value })}
                             placeholder="Referral Corde 10% OFF DISCOUNT"
@@ -213,10 +212,10 @@ class FormBooking extends React.Component {
                         />
                         
                     </div>
-                    <div class="row input-btn-padding-x mb-3">
+                    <div className="row input-btn-padding-x mb-3">
                         <select
                             type="text"
-                            class="form-select"
+                            className="form-select"
                             id="type_of_service"
                             placeholder="type of service"
                             value={this.state.type_of_service} onChange={e => this.setState({ type_of_service: e.target.value })}
@@ -228,9 +227,9 @@ class FormBooking extends React.Component {
                         </select>
                     </div>
                 </div>
-                <button id="button" onClick={e => this.handleFormSubmit(e)} class="w-100 btn btn-lg btn-primary" type="submit">Book your Trip</button>
-                <hr class="my-4" />
-                <small class="text-muted">By clicking Your Booking, you agree to the terms of use.</small>
+                <button id="button" onClick={e => this.handleFormSubmit(e)} className="w-100 btn btn-lg btn-primary" type="submit">Book your Trip</button>
+                <hr className="my-4" />
+                <small className="text-muted">By clicking Your Booking, you agree to the terms of use.</small>
             </form>
         </div>
     );

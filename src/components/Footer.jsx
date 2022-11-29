@@ -9,8 +9,8 @@ import Whatsapp from '../assets/icons/whatsapp.png';
 export function Footer() {
   return (
     <footer className="main-footer">
-      <div class="row">
-        <div class="col">
+      <div className="row">
+        <div className="col">
           <h4>FIVE STARS CAR SERVICE INC</h4>
           <h1 >
             <li>342-420-6969</li>
@@ -18,9 +18,9 @@ export function Footer() {
             <li>123 Streeet South North</li>
           </h1>
         </div>
-        <div class="col">
+        <div className="col">
         </div>
-        <div class="col">
+        <div className="col">
           <h4>FOLLOW US</h4>
           <div className="social-networks">
             <img id="social" src={Instagram} alt="instagram" />
@@ -31,7 +31,7 @@ export function Footer() {
         </div>
       </div>
       <hr />
-      <div class="row" id="terms-block">
+      <div className="row" id="terms-block">
         <p className="terms">
           &copy;{new Date().getFullYear()} Five Stars Car Service | All rights reserved | <a href="/">FAQS</a>  | <a href="/privacy">Privacy Policy</a>| developed by<a href="/"> K&L Solutions</a>
           
