@@ -5,7 +5,7 @@ import {BrowserRouter, Routes, Route} from'react-router-dom';
 
 import { Home } from '../pages/Home';
 import { Privacy } from "../pages/Privacy";
-import { Faqs } from "../pages/Faqs";
+import {FaqPage} from "../pages/FaqPage";
 import { NotFound } from "../pages/NotFound";
 import { Admin } from "../pages/Admin";
 
@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Routes>
             <Route exact path='/'element={<Home/>} />
             <Route exact path="/privacy" element={<Privacy/>}/>
-            <Route exact path="/faqs" element={<Faqs/>}/>
+            <Route exact path="/faqs" element={<FaqPage/>}/>
             <Route exact path="*" element={<NotFound/>}/>
             <Route exact path="/admin-backo" element={<Admin/>}/>
         </Routes>
