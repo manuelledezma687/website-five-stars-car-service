@@ -1,3 +1,4 @@
+import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 import React from 'react';
 import { motion } from "framer-motion";
 
@@ -72,7 +73,7 @@ class FormBooking extends React.Component {
                 <div className="row" id='google'>
                 <div className="row input-btn-padding-x mb-3">
                     <label htmlFor="" id='label-google'>Pick Up</label>
-                    <input
+                    {/* <input
                             type="text"
                             className="form-control"
                             value={this.state.pick_up_location} onChange={e => this.setState({ pick_up_location: e.target.value })}
@@ -80,11 +81,65 @@ class FormBooking extends React.Component {
                             placeholder="Type Your Adress"
                             name="pick_up_location"
                             maxLength="50"
+                        /> */}
+
+                        <GooglePlacesAutocomplete
+                            selectProps={{
+                                onChange: (o) => {
+                                    this.setState({ pick_up_location: o.label })
+                                },
+                                styles: {
+                                    input: (provided, state) => ({
+                                        ...provided,
+                                        fontSize: '1rem',
+                                        fontWeight: '400',
+                                        color: '#212529',
+                                    }),
+                                    option: (provided, state) => ({
+                                        ...provided,
+                                        color: '#212529',
+                                        fontSize: '1rem',
+                                        fontWeight: '400',
+                                    }),
+                                    singleValue: (provided, state) => ({
+                                        ...provided,
+                                        fontSize: '1rem',
+                                        fontWeight: '400',
+                                        color: '#212529',
+                                    }),
+                                    control: (provided, state) =>({
+                                        ...provided,
+                                        borderColor: state.isFocused ? '#86b7fe' : '#ced4da',
+                                        borderRadius:'0.375rem',
+                                        boxShadow: state.isFocused ? '0 0 0 0.25rem rgb(172, 186, 189)' : '',
+                                    }),
+                                    container: (provided, state) =>({
+                                        ...provided,
+                                        fontSize: '1rem',
+                                        fontWeight: '400',
+                                        padding: '0',
+                                        color: '#212529',
+                                        borderColor: state.isSelected ? '#86b7fe' : '',
+                                        boxShadow: state.isSelected ? '0 0 0 0.25rem rgb(172, 186, 189)' : '',
+                                    }),
+                                    placeholder: (provided, state) =>({
+                                        ...provided,
+                                        fontSize: '1rem',
+                                        fontWeight: '400',
+                                        color: '#212529',
+                                    }),
+                                },
+                            }}
+                            autocompletionRequest={{
+                                componentRestrictions: {
+                                    country: ['us']
+                                }
+                            }}
                         />
                     </div>
                     <div className="row input-btn-padding-x mb-3">
                     <label htmlFor="" id='label-google'>Destiny</label>
-                    <input
+                    {/* <input
                             type="text"
                             className="form-control"
                             value={this.state.drop_off_location} onChange={e => this.setState({ drop_off_location: e.target.value })}
@@ -92,6 +147,61 @@ class FormBooking extends React.Component {
                             placeholder="Type Your Adress"
                             name="drop_off_location"
                             maxLength="50"
+                        /> */}
+
+                        <GooglePlacesAutocomplete
+                            className="form-select"
+                            selectProps={{
+                                onChange: (o) => {
+                                    this.setState({ drop_off_location: o.label })
+                                },
+                                styles: {
+                                    input: (provided, state) => ({
+                                        ...provided,
+                                        fontSize: '1rem',
+                                        fontWeight: '400',
+                                        color: '#212529',
+                                    }),
+                                    option: (provided, state) => ({
+                                        ...provided,
+                                        color: '#212529',
+                                        fontSize: '1rem',
+                                        fontWeight: '400',
+                                    }),
+                                    singleValue: (provided, state) => ({
+                                        ...provided,
+                                        fontSize: '1rem',
+                                        fontWeight: '400',
+                                        color: '#212529',
+                                    }),
+                                    control: (provided, state) =>({
+                                        ...provided,
+                                        borderColor: state.isFocused ? '#86b7fe' : '#ced4da',
+                                        borderRadius:'0.375rem',
+                                        boxShadow: state.isFocused ? '0 0 0 0.25rem rgb(172, 186, 189)' : '',
+                                    }),
+                                    container: (provided, state) =>({
+                                        ...provided,
+                                        fontSize: '1rem',
+                                        fontWeight: '400',
+                                        padding: '0',
+                                        color: '#212529',
+                                        borderColor: state.isSelected ? '#86b7fe' : '',
+                                        boxShadow: state.isSelected ? '0 0 0 0.25rem rgb(172, 186, 189)' : '',
+                                    }),
+                                    placeholder: (provided, state) =>({
+                                        ...provided,
+                                        fontSize: '1rem',
+                                        fontWeight: '400',
+                                        color: '#212529',
+                                    })
+                                },
+                            }}
+                            autocompletionRequest={{
+                                componentRestrictions: {
+                                    country: ['us']
+                                }
+                            }}
                         />
                         </div>
                 </div>
