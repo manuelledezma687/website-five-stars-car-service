@@ -10,4 +10,3 @@
     - npm install 
 
 
-https://www.freecodecamp.org/espanol/news/como-usar-axios-con-react/#c-mo-hacer-una-solicitud-post
