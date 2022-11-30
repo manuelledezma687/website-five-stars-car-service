@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from '../components/Header';
+import { HeaderSecondary } from '../components/HeaderSecondary';
 import { Footer } from '../components/Footer';
 import  FaqsContainer  from '../containers/FaqsContainer';
 
@@ -7,6 +7,6 @@ import  FaqsContainer  from '../containers/FaqsContainer';
 export function FaqPage() {
 
     return (
-      <><Header /><FaqsContainer /><Footer /></>
+      <><HeaderSecondary /><FaqsContainer /><Footer /></>
 );
 }

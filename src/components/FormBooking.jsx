@@ -85,6 +85,8 @@ class FormBooking extends React.Component {
 
                         <GooglePlacesAutocomplete
                             selectProps={{
+                                clearablee: true,
+                                placeholder: 'Type your Location',
                                 onChange: (o) => {
                                     this.setState({ pick_up_location: o.label })
                                 },
@@ -152,6 +154,7 @@ class FormBooking extends React.Component {
                         <GooglePlacesAutocomplete
                             className="form-select"
                             selectProps={{
+                                placeholder: 'Type your Destiny',
                                 onChange: (o) => {
                                     this.setState({ drop_off_location: o.label })
                                 },

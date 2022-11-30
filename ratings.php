@@ -4,7 +4,7 @@ include_once "con_db.php";
 
 switch ($method) {
     case 'GET':
-      $sql = "SELECT first_name, last_name, comments,created_at FROM ratings ORDER BY created_at DESC LIMIT 3"; 
+      $sql = "SELECT rating_id, first_name, last_name, comments,created_at FROM ratings ORDER BY created_at DESC LIMIT 3"; 
       break;
     case 'POST':
       $first_name = $_POST["first_name"];

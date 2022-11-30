@@ -1,13 +1,13 @@
 import React from 'react';
-import { Header } from '../components/Header';
+import { HeaderSecondary } from '../components/HeaderSecondary';
 import { Footer } from '../components/Footer';
 
 import "../styles/Privacy.css";
 
 export function Privacy() {
   return (
-    <><><Header /><section className="privacy">
-      <h1 className="privacy-title ">Privacy Policy</h1>
+    <><><HeaderSecondary/><section className="privacy">
+      <h1 className="privacy-title">Privacy Policy</h1>
       <div className="container-privacy">
           <p className="card-text" id="">
             Email addresses and telephone numbers obtained by the FiveStarsCarService.com website are only used to contact you regarding:<br></br>(1) the transportation request which you have submitted, until such time as you have indicated to us whether you wish to accept or decline our bid.<br></br> (2) offering you the option to setup of a customer account with us, if you did accept a bid from us; and <br></br>(3) promotional offers, if you chose to setup an account with us and did not opt out of receiving such offers at the time of setting up the account or at anytime afterwards.
