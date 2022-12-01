@@ -14,6 +14,7 @@ switch ($method) {
       $full_name = trim($_POST["full_name"]);
       $email = trim($_POST["email"]);
       $hour = trim($_POST["hour"]);
+      $phone = trim($_POST["phone"]);
       $date_booking = trim($_POST["date_booking"]);
       $flight_id = trim($_POST["flight_id"]);
       $payment_method = trim($_POST["payment_method"]);
@@ -22,7 +23,7 @@ switch ($method) {
       $referrals = trim($_POST["referrals"]);
       $type_of_service = trim($_POST["type_of_service"]);
 
-      $sql = "INSERT into bookings (pick_up_location, drop_off_location, full_name, email, hour, date_booking, flight_id, payment_method, passengers, observations, referrals, type_of_service) values ('$pick_up_location', '$drop_off_location', '$full_name', '$email', '$hour', '$date_booking', '$flight_id', '$payment_method', '$passengers', '$observations', '$referrals', '$type_of_service')"; 
+      $sql = "INSERT into bookings (pick_up_location, drop_off_location, full_name, email, hour, phone, date_booking, flight_id, payment_method, passengers, observations, referrals, type_of_service) values ('$pick_up_location', '$drop_off_location', '$full_name', '$email', '$hour', '$phone', '$date_booking', '$flight_id', '$payment_method', '$passengers', '$observations', '$referrals', '$type_of_service')"; 
       break;
 }
 

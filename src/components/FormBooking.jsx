@@ -16,6 +16,7 @@ class FormBooking extends React.Component {
         full_name:'',
         email:'',
         hour:'',
+        phone:'',
         date_booking:'',
         flight_id:'',
         payment_method:'',
@@ -34,6 +35,7 @@ class FormBooking extends React.Component {
         formData.append('full_name', this.state.full_name)
         formData.append('email', this.state.email)
         formData.append('hour', this.state.hour)
+        formData.append('phone', this.state.phone)
         formData.append('date_booking', this.state.date_booking)
         formData.append('flight_id', this.state.flight_id)
         formData.append('payment_method', this.state.payment_method)
@@ -50,7 +52,8 @@ class FormBooking extends React.Component {
         })
         .then(function (response) {
             console.log(response)
-            alert('Congratulations, your booking was registered.');  
+            window.location.replace(`https://fivestarscarservice.com/success`);
+            //alert('Congratulations, your booking was registered.');  
         })
         .catch(function (response) {
             console.log(response)
@@ -237,7 +240,7 @@ class FormBooking extends React.Component {
                             type="time"
                             className="form-control"
                             id="hour"
-                            value={this.state.time} onChange={e => this.setState({ time: e.target.value })}
+                            value={this.state.hour} onChange={e => this.setState({ hour: e.target.value })}
                             placeholder="hour"
                             name="date_time"
                         />
@@ -299,6 +302,15 @@ class FormBooking extends React.Component {
                                 <option value="7">7</option>
                                 <option value="8">8</option>
                             </select>
+                            <input
+                            type="text"
+                            className="form-control"
+                            id="phone"
+                            value={this.state.phone} onChange={e => this.setState({ phone: e.target.value })}
+                            placeholder="Your phone"
+                            name="phone"
+                            maxLength="10"
+                        />
                         </div>
                     </div>
                     <div className="row input-btn-padding-x mb-3">

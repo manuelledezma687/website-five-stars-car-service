@@ -1,16 +1,17 @@
 import React from "react";
 import { HeaderSecondary } from '../components/HeaderSecondary';
 import { Footer } from '../components/Footer';
+import Ok from '../assets/icons/okay.png'
 
 import "../styles/NotFound.css";
 
-export function NotFound() {
+export function Success() {
 
     return (
         <><HeaderSecondary />
         <section id="not-found">
-        <h1 >404.</h1>
-        <p>Sorry, page not Found....</p>
+        <img src={Ok} alt="Ok" className="logo-ok"/>
+        <p className="success">Your booking was registered successfully</p>
         </section><Footer /></>
     );
 }

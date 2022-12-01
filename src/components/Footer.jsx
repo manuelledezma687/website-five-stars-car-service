@@ -33,7 +33,7 @@ export function Footer() {
       <hr />
       <div className="row" id="terms-block">
         <p className="terms">
-          &copy;{new Date().getFullYear()} Five Stars Car Service | All rights reserved | <a href="/">FAQS</a>  | <a href="/privacy">Privacy Policy</a>| developed by<a href="/"> K&L Solutions</a>
+          &copy;{new Date().getFullYear()} Five Stars Car Service | All rights reserved | <a href="/faqs">FAQS</a>  | <a href="/privacy">Privacy Policy</a>| developed by<a href="/"> K&L Solutions</a>
           
         </p>
       </div>
