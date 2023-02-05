@@ -13,9 +13,9 @@ export function Footer() {
         <div className="col">
           <h4>FIVE STARS CAR SERVICE INC</h4>
           <h1 >
-            <li>342-420-6969</li>
-            <li>Atlanta, USA</li>
-            <li>123 Streeet South North</li>
+            <li>1387 Wildflower Downs</li>
+            <li>Lawrenceville, GA  30044</li>
+            <li>United States</li>
           </h1>
         </div>
         <div className="col">

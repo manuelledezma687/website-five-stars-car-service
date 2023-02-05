@@ -31,5 +31,17 @@
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.1.0",
     "vite": "^3.1.0"
+  },
+  "description": "# Steps to install on your local.",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manuelledezma687/project-web-fivestars.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manuelledezma687/project-web-fivestars/issues"
   }
 }
